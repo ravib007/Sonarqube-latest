@@ -1,0 +1,27 @@
+    1   sysctl vm.max_map_count
+    2    sysctl fs.file-max
+    3    ulimit -n
+    4  sudo vi /etc/sysctl.conf
+    5  sudo vi /etc/security/limits.conf
+    6  sudo vi /etc/sysctl.conf
+    7  sudo vi /etc/security/limits.conf
+    8  sudo sysctl -p
+   11  amazon-linux-extras install postgresql12 vim epel -y
+   12  yum install -y postgresql-server postgresql-devel
+   13  postgres --version
+   14  /usr/bin/postgresql-setup --initdb
+   15  vi /var/lib/pgsql/data/pg_hba.conf
+   16  systemctl enable postgresql
+   17  systemctl start postgresql
+   18  su - postgres
+   19  wget https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.rpm
+   20  rpm -i jdk-17_linux-x64_bin.rpm
+   21  psql --version
+   22  java --version
+   23  cd /op
+   25  sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-10.6.0.92116.zip
+   27  unzip sonarqube-10.6.0.92116.zip
+   28  sudo useradd sonaradmin
+   29  sudo chown -R sonaradmin:sonaradmin sonarqube-10.6.0.92116
+   31  sudo vi /opt/sonarqube-10.6.0.92116/conf/sonar.properties
+   32  su sonaradmin
